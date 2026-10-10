@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0B1F2A;
+  --mist: #DFF3EE;
+  --coral: #FFD9D2;
+  --signal: #FF4D3D;
+  --sky: #CFE8FF;
+  --teal: #2BB8A3;
+  --amber: #FFB020;
+  --fog: #E7EDF0;
+  --paper: #FFFFFF;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-mist: var(--mist);
+  --color-coral: var(--coral);
+  --color-signal: var(--signal);
+  --color-sky: var(--sky);
+  --color-teal: var(--teal);
+  --color-amber: var(--amber);
+  --color-fog: var(--fog);
+  --color-paper: var(--paper);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+.clip-path-overlay {
+  clip-path: inset(0 100% 0 0);
+}

@@ -37,12 +37,9 @@ export default function Header({ isMenuOpen, onMenuToggle }: HeaderProps) {
     };
   }, []);
 
-  const bgColor = tone === 'ink' ? 'var(--paper)' : 'var(--ink)';
-
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 pt-4 px-[20px] md:px-[52px]"
-      style={{ backgroundColor: bgColor }}
+      className="fixed top-0 left-0 right-0 z-50 pt-4 px-[20px] md:px-[52px] transition-colors duration-300"
     >
       <div className="flex items-center justify-between">
         <a href="#hero" className="inline-block">

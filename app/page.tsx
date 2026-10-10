@@ -1,9 +1,21 @@
+'use client';
+
+import { useState } from 'react';
+import Header from '@/components/layout/Header';
+import MenuOverlay from '@/components/layout/MenuOverlay';
+import Hero from '@/components/sections/Hero';
+
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <>
-      <section id="hero" className="min-h-screen bg-mist flex items-center justify-center">
-        <h1 className="text-4xl font-display uppercase text-ink">KAZE</h1>
-      </section>
+      <Header
+        isMenuOpen={isMenuOpen}
+        onMenuToggle={() => setIsMenuOpen(!isMenuOpen)}
+      />
+      <MenuOverlay isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+      <Hero />
       <section id="updates"></section>
       <section id="demo"></section>
       <section id="timeline"></section>
@@ -13,3 +25,4 @@ export default function Home() {
     </>
   );
 }
+
